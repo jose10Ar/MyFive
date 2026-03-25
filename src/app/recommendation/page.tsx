@@ -21,7 +21,7 @@ export default function RecommendationDetail() {
             <div className="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
               <img
                 className="w-full h-full object-cover"
-                alt="User profile"
+                alt="Perfil de usuario"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJaJtCAf0JxPZUsLBvfYqV_QAqYJ-BZpnMAdYfP21SzExxRLQUuVLQmNvU3G8YIt0e-5_lhTSu9G-9yYjA2koCe5YY1Y5U_w642MJ9eum24xpdL5XEX-8L9sRDhSZ-P7YxAnVJgWlpLbA7GGxwqFULuARKaqWzD2zaFF62CQyUDDwFh28h1GjlO0SDCPrU41ZrCSk9JOcNmoDeMRMBJzfEGgbePmX_UWyvSfdYJXUlKqfvqTbW6HT7D6WVmG8cSn-xV5dMTAnow"
               />
             </div>
@@ -34,7 +34,7 @@ export default function RecommendationDetail() {
           <div className="absolute inset-0">
             <img
               className="w-full h-full object-cover"
-              alt="Interstellar header"
+              alt="Interstellar Portada"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWrUv2SiF9iMggWlVEGRQY8rPAK6edg35gvWPKfyQZKeOMOHCUWx1mSR7ND_gvk3s4qjkLTsp6FEu01H_v1JM6OYtG6LTGMcw8nyRa1hpSxZ21fLWmv8_w4s6CznsBuj7EOOlCty1gzxYFbXvXPI4WRcJsjJP4MJ23BcxpX4leUnf8is7GA9oMyMEPpIW04jYj9TTBSyJubdMb1cF0Fsz07oXDX_rhfQiVlR77fQCxe2XAmBVtbaCkR8yZ6d2D35yGRGISV403-A"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
@@ -42,7 +42,7 @@ export default function RecommendationDetail() {
           <div className="absolute bottom-0 left-0 w-full p-8 md:p-16 flex flex-col items-start gap-4">
             <div className="flex gap-2">
               <span className="bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest font-label">
-                Sci-Fi
+                Ciencia Ficción
               </span>
               <span className="bg-surface-container-high text-on-surface-variant px-3 py-1 rounded-sm text-[10px] font-bold uppercase tracking-widest font-label">
                 2h 49m
@@ -59,7 +59,7 @@ export default function RecommendationDetail() {
                 >
                   play_circle
                 </span>
-                Watch Trailer
+                Ver Tráiler
               </button>
               <div className="flex flex-col">
                 <span className="text-secondary font-bold text-2xl flex items-center gap-1">
@@ -72,7 +72,7 @@ export default function RecommendationDetail() {
                   </span>
                 </span>
                 <span className="text-on-surface-variant text-xs font-medium uppercase tracking-tighter">
-                  Global Rating
+                  Puntaje Global
                 </span>
               </div>
             </div>
@@ -83,14 +83,14 @@ export default function RecommendationDetail() {
           <div className="lg:col-span-7 space-y-12">
             <article>
               <h2 className="font-headline font-bold text-2xl text-primary mb-4">
-                The Odyssey
+                La Odisea
               </h2>
               <p className="font-body text-lg leading-relaxed text-on-surface-variant">
-                When Earth becomes uninhabitable in the future, a farmer and
-                ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft,
-                along with a team of researchers, to find a new planet for humans.
-                A breathtaking journey across space and time that challenges the
-                limits of human endurance and the power of love.
+                Cuando la Tierra se vuelve inhabitable en el futuro, un granjero y
+                ex-piloto de la NASA, Joseph Cooper, tiene la misión de pilotar una nave espacial,
+                junto con un equipo de investigadores, para encontrar un nuevo planeta para los humanos.
+                Un viaje impresionante a través del espacio y el tiempo que desafía los
+                límites de la resistencia humana y el poder del amor.
               </p>
             </article>
 
@@ -112,13 +112,11 @@ export default function RecommendationDetail() {
                   <h4 className="font-headline font-bold text-lg leading-tight">
                     Sarah Jenkins
                   </h4>
-                  <p className="text-sm opacity-80">Close Friend • 2 days ago</p>
+                  <p className="text-sm opacity-80">Mejor Amiga • hace 2 días</p>
                 </div>
               </div>
               <blockquote className="font-headline text-2xl font-semibold italic leading-snug mb-6">
-                "The most visceral cinematic experience of the decade. The docking
-                scene still gives me chills every time Zimmer's score swells. It's
-                not just a movie; it's a feeling."
+                "La experiencia cinematográfica más contundente de la década. La escena del acoplamiento todavía me pone la piel de gallina cada vez que suena Hans Zimmer. No es solo una película; es un sentimiento."
               </blockquote>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
@@ -133,14 +131,14 @@ export default function RecommendationDetail() {
                   </span>
                 </div>
                 <button className="font-label font-bold text-sm underline decoration-2 underline-offset-4">
-                  Read full review
+                  Leer reseña completa
                 </button>
               </div>
             </div>
 
             <section>
               <h3 className="font-headline font-bold text-xl text-primary mb-6">
-                Director & Lead Cast
+                Director y Elenco Principal
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="bg-surface-container-low p-4 rounded-lg flex flex-col items-center text-center gap-2">
@@ -203,7 +201,7 @@ export default function RecommendationDetail() {
             <div className="bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-outline-variant/10">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="font-headline font-bold text-xl text-primary italic">
-                  Pochoclo Count
+                  Contador de Pochoclos
                 </h3>
                 <span className="bg-secondary-container text-on-secondary-container font-black px-3 py-1 rounded-full text-lg">
                   1,248
@@ -217,17 +215,17 @@ export default function RecommendationDetail() {
                   >
                     movie_filter
                   </span>
-                  Toss Pochoclo
+                  Tirar un Pochoclo
                 </button>
               </div>
               <p className="text-xs text-on-surface-variant text-center mt-4 font-medium uppercase tracking-widest italic">
-                Join the crowd
+                Sumate a la manija
               </p>
             </div>
 
             <section className="space-y-6">
               <h3 className="font-headline font-bold text-xl text-primary px-2">
-                Friends' Thoughts
+                Qué opinan tus amigos
               </h3>
               <div className="space-y-4">
                 <div className="flex gap-4 p-4 rounded-xl bg-surface-container-low/50">
@@ -240,12 +238,11 @@ export default function RecommendationDetail() {
                     <div className="flex justify-between items-start mb-1">
                       <span className="font-bold text-sm">David Chen</span>
                       <span className="text-[10px] text-on-surface-variant">
-                        4h ago
+                        hace 4h
                       </span>
                     </div>
                     <p className="text-sm text-on-surface-variant leading-relaxed">
-                      Hans Zimmer went absolutely crazy on this one. The church
-                      organ sends me to another dimension.
+                      Hans Zimmer se volvió completamente loco en esta película. El órgano de la iglesia me mandó a otra dimensión literal.
                     </p>
                     <div className="flex items-center gap-4 mt-2">
                       <button className="text-xs font-bold text-primary flex items-center gap-1">
@@ -255,7 +252,7 @@ export default function RecommendationDetail() {
                         12
                       </button>
                       <button className="text-xs font-bold text-on-surface-variant">
-                        Reply
+                        Responder
                       </button>
                     </div>
                   </div>
@@ -271,12 +268,11 @@ export default function RecommendationDetail() {
                     <div className="flex justify-between items-start mb-1">
                       <span className="font-bold text-sm">Elena Rodriguez</span>
                       <span className="text-[10px] text-on-surface-variant">
-                        1d ago
+                        hace 1d
                       </span>
                     </div>
                     <p className="text-sm text-on-surface-variant leading-relaxed">
-                      The science is so accurate (mostly) and yet the emotional
-                      core is what actually anchors the story.
+                      La ciencia es súper precisa (en su mayoría) y sin embargo, el núcleo emocional es lo que realmente ancla la historia. Un viaje hermoso.
                     </p>
                     <div className="flex items-center gap-4 mt-2">
                       <button className="text-xs font-bold text-primary flex items-center gap-1">
@@ -286,7 +282,7 @@ export default function RecommendationDetail() {
                         8
                       </button>
                       <button className="text-xs font-bold text-on-surface-variant">
-                        Reply
+                        Responder
                       </button>
                     </div>
                   </div>
@@ -297,7 +293,7 @@ export default function RecommendationDetail() {
                 <div className="relative">
                   <input
                     className="w-full bg-surface-container-highest border-none rounded-full px-6 py-4 text-sm focus:ring-2 focus:ring-surface-tint/40 transition-all placeholder:text-on-surface-variant/50"
-                    placeholder="Add your thought..."
+                    placeholder="Agregá tu pensamiento..."
                     type="text"
                   />
                   <button className="absolute right-2 top-2 p-2 bg-primary text-on-primary rounded-full">

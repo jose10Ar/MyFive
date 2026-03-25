@@ -10,15 +10,15 @@ export default function Home() {
       <main className="pt-24 pb-32 px-4 max-w-7xl mx-auto">
         <section className="mb-12">
           <h1 className="font-headline font-extrabold text-4xl text-primary tracking-tight mb-2 ml-4">
-            The Screening Room
+            El Feed
           </h1>
           <p className="font-body text-on-surface-variant ml-4 opacity-70">
-            Curated recommendations from your circle.
+            Recomendaciones curadas por tu círculo.
           </p>
         </section>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Card 1 & 2 mapped dynamically */}
+          {/* Tarjeta 1 y 2 mapeada dinamicamente */}
           {feedRecommendations.slice(0, 1).map((rec) => (
             <article
               key={rec.id}
@@ -54,7 +54,7 @@ export default function Home() {
                       {rec.user.name}
                     </p>
                     <p className="font-label text-[10px] text-secondary font-bold uppercase tracking-wider">
-                      Rated {rec.ratingPochoclos} Pochoclos
+                      Le dio {rec.ratingPochoclos} Pochoclos
                     </p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function Home() {
             </article>
           ))}
 
-          {/* Special Featured Section */}
+          {/* Sección Destacada */}
           <div className="lg:col-span-1 space-y-8">
             <div className="bg-tertiary-container rounded-xl p-8 text-on-tertiary-container relative overflow-hidden group">
               <div className="absolute -right-8 -bottom-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
@@ -96,17 +96,16 @@ export default function Home() {
                 </span>
               </div>
               <span className="font-label text-[10px] font-bold uppercase tracking-[0.2em] mb-4 block">
-                Director's Cut
+                Edición del Director
               </span>
               <h2 className="font-headline font-extrabold text-3xl mb-4 leading-tight">
-                Must Watch: The Golden Hour
+                Imperdible: The Golden Hour
               </h2>
               <p className="font-body text-sm mb-6 opacity-90 leading-relaxed">
-                Join the exclusive community watch party for this year's most
-                anticipated indie drama.
+                Unite a la "watch party" exclusiva de la comunidad para ver el drama indie del año.
               </p>
               <button className="bg-secondary-container text-on-secondary-container px-6 py-2.5 rounded-full font-bold text-sm flex items-center gap-2 hover:scale-105 transition-transform active:scale-95">
-                Reserve Seat
+                Reservar Asiento
                 <span className="material-symbols-outlined text-sm">
                   arrow_forward
                 </span>
@@ -133,7 +132,7 @@ export default function Home() {
                         {feedRecommendations[1].ratingPochoclos} Pochoclos
                       </p>
                       <p className="font-body text-xs text-on-surface-variant line-clamp-3">
-                        {feedRecommendations[1].user.name.split(" ")[0]} says: "
+                        {feedRecommendations[1].user.name.split(" ")[0]} dijo: "
                         {feedRecommendations[1].review}"
                       </p>
                     </div>
@@ -145,7 +144,7 @@ export default function Home() {
                       <div className="w-6 h-6 rounded-full border-2 border-white bg-slate-400"></div>
                     </div>
                     <span className="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">
-                      +{feedRecommendations[1].likes} Friends loved this
+                      +{feedRecommendations[1].likes} Amigos flashearon con esto
                     </span>
                   </div>
                 </Link>
@@ -153,7 +152,7 @@ export default function Home() {
             )}
           </div>
 
-          {/* Third wide card */}
+          {/* Tarjeta 3 */}
           {feedRecommendations.length > 2 && (
             <article className="bg-surface-container-lowest rounded-lg overflow-hidden editorial-shadow md:col-span-2 lg:col-span-1">
               <Link href="/recommendation" className="relative aspect-video block">
@@ -183,7 +182,7 @@ export default function Home() {
                       {feedRecommendations[2].user.name}
                     </p>
                     <p className="font-label text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-                      Rated {feedRecommendations[2].ratingPochoclos} Pochoclos
+                      Le dio {feedRecommendations[2].ratingPochoclos} Pochoclos
                     </p>
                   </div>
                 </div>
@@ -195,11 +194,11 @@ export default function Home() {
                     <span className="material-symbols-outlined text-sm">
                       thumb_up
                     </span>
-                    Nice ({feedRecommendations[2].likes})
+                    ¡Joya! ({feedRecommendations[2].likes})
                   </button>
                   <button className="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold text-primary flex items-center gap-2 hover:bg-surface-container-highest transition-colors">
                     <span className="material-symbols-outlined text-sm">add</span>
-                    Watchlist
+                    Para Ver
                   </button>
                 </div>
               </div>

@@ -39,16 +39,16 @@ export default function Profile() {
                   <span className="font-label font-bold text-xs uppercase tracking-widest text-primary">
                     {(currentUser.followers / 1000).toFixed(1)}k
                   </span>
-                  <span className="text-xs text-on-surface-variant">Followers</span>
+                  <span className="text-xs text-on-surface-variant">Seguidores</span>
                 </div>
                 <div className="flex items-center gap-1 px-4 py-2 bg-surface-container-low rounded-full">
                   <span className="font-label font-bold text-xs uppercase tracking-widest text-primary">
                     {currentUser.following}
                   </span>
-                  <span className="text-xs text-on-surface-variant">Following</span>
+                  <span className="text-xs text-on-surface-variant">Siguiendo</span>
                 </div>
                 <button className="bg-gradient-to-r from-primary to-primary-container text-white px-8 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-all active:scale-95">
-                  Edit Profile
+                  Editar Perfil
                 </button>
               </div>
             </div>
@@ -59,12 +59,12 @@ export default function Profile() {
           <div className="flex justify-between items-end mb-8 pl-8">
             <div>
               <span className="text-secondary font-bold text-xs uppercase tracking-[0.2em] block mb-2">
-                The Essentials
+                Los Irremplazables
               </span>
               <h2 className="font-headline font-bold text-3xl text-primary">Mis 4</h2>
             </div>
             <button className="text-primary font-bold text-sm hover:underline flex items-center gap-1">
-              Update Favorites <span className="material-symbols-outlined text-sm">edit</span>
+              Editar Favoritos <span className="material-symbols-outlined text-sm">edit</span>
             </button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -98,7 +98,7 @@ export default function Profile() {
         <section>
           <div className="flex items-center gap-4 mb-8">
             <h2 className="font-headline font-bold text-2xl text-primary">
-              Recent Curations
+              Curadurías Recientes
             </h2>
             <div className="h-[1px] flex-1 bg-outline-variant opacity-15"></div>
           </div>
@@ -119,10 +119,10 @@ export default function Profile() {
                       className="material-symbols-outlined text-sm"
                       style={{ fontVariationSettings: "'FILL' 1" }}
                     >
-                      {curation.type === "Movie" ? "star" : "audio_file"}
+                      {curation.type === "Movie" || curation.type === "Pelicula" ? "star" : "audio_file"}
                     </span>{" "}
                     {curation.ratingGlobal && curation.ratingGlobal}
-                    {curation.type !== "Movie" && " Album"}
+                    {curation.type === "Album" && " Album"}
                   </div>
                 </div>
                 <div className="p-6">
@@ -149,7 +149,7 @@ export default function Profile() {
                   </p>
                   <div className="flex justify-between items-center pt-4 border-t border-outline-variant/10">
                     <span className="text-xs text-slate-400">
-                      Recommended {curation.timeAgo}
+                      Recomendado {curation.timeAgo}
                     </span>
                     <button className="text-primary hover:text-primary-container active:scale-90 transition-transform">
                       <span className="material-symbols-outlined">favorite</span>
@@ -161,7 +161,7 @@ export default function Profile() {
           </div>
           <div className="mt-12 text-center">
             <button className="text-on-surface-variant font-bold text-sm bg-surface-container-high px-10 py-3 rounded-full hover:bg-surface-container-highest transition-colors uppercase tracking-widest">
-              Load More Curations
+              Cargar más curadurías
             </button>
           </div>
         </section>

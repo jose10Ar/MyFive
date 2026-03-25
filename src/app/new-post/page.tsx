@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-const VIBES = ["Mind-Blowing", "Cozy", "Intense", "Classic"];
+const VIBES = ["Te la Vuela", "Para el mate", "Intensísima", "Re Clásico"];
 
 type TMDBResult = {
   id: number;
@@ -18,7 +18,7 @@ type TMDBResult = {
 
 export default function NewPost() {
   const [rating, setRating] = useState<number>(4);
-  const [activeVibes, setActiveVibes] = useState<string[]>(["Mind-Blowing"]);
+  const [activeVibes, setActiveVibes] = useState<string[]>(["Te la Vuela"]);
   const [review, setReview] = useState("");
 
   // Búsqueda en TMDB
@@ -75,7 +75,7 @@ export default function NewPost() {
               arrow_back
             </Link>
             <span className="font-headline font-bold text-xl tracking-tight text-purple-900">
-              New Recommendation
+              Nueva Recomendación
             </span>
           </div>
           <div className="flex items-center gap-4">
@@ -98,11 +98,11 @@ export default function NewPost() {
           <div className="bg-tertiary-container rounded-tr-xl rounded-bl-xl p-8 relative overflow-hidden shadow-lg">
             <div className="relative z-10">
               <span className="font-label text-xs font-bold text-on-tertiary-container uppercase tracking-[0.2em] mb-2 block">
-                The Stage is Yours
+                El escenario es tuyo
               </span>
               <h1 className="font-headline text-3xl font-extrabold text-white leading-tight mb-4">
-                What's the next <br />
-                <span className="text-secondary-fixed">Masterpiece?</span>
+                ¿Cuál es la próxima <br />
+                <span className="text-secondary-fixed">Obra Maestra?</span>
               </h1>
             </div>
             <div className="absolute -right-10 -bottom-10 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
@@ -118,7 +118,7 @@ export default function NewPost() {
           {/* TMDB Search Component */}
           <div className="space-y-3 relative">
             <label className="font-headline font-bold text-primary px-1">
-              Find Movie or Show
+              Buscá una Peli o Serie
             </label>
             <div className="relative group">
               <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">
@@ -126,7 +126,7 @@ export default function NewPost() {
               </span>
               <input
                 className="w-full pl-12 pr-4 py-4 bg-surface-container-highest rounded-lg border-none focus:ring-2 focus:ring-surface-tint/40 font-body text-on-surface placeholder:text-outline/60 transition-all"
-                placeholder="Search for a title..."
+                placeholder="Ingresá un título acá..."
                 type="text"
                 value={searchQuery}
                 onChange={(e) => {
@@ -145,12 +145,12 @@ export default function NewPost() {
             {searchResults.length > 0 && (
               <div className="absolute z-20 w-full mt-2 bg-white rounded-lg shadow-xl shadow-purple-900/10 border border-surface-container overflow-hidden">
                 {searchResults.map((result) => {
-                  const title = result.title || result.name || "Unknown Title";
+                  const title = result.title || result.name || "Título Desconocido";
                   const date = result.release_date || result.first_air_date || "";
                   const year = date ? date.split("-")[0] : "????";
                   const imageUrl = result.poster_path
                     ? `https://image.tmdb.org/t/p/w92${result.poster_path}`
-                    : "https://via.placeholder.com/92x138.png?text=No+Poster";
+                    : "https://via.placeholder.com/92x138.png?text=Sin+Portada";
 
                   return (
                     <button
@@ -169,7 +169,7 @@ export default function NewPost() {
                         </p>
                         <p className="font-body text-xs text-on-surface-variant flex gap-2">
                           <span className="uppercase text-[10px] font-bold tracking-widest text-secondary">
-                            {result.media_type === "tv" ? "Series" : "Movie"}
+                            {result.media_type === "tv" ? "Serie" : "Película"}
                           </span>
                           • {year}
                         </p>
@@ -186,13 +186,13 @@ export default function NewPost() {
                 {selectedMovie.poster_path && (
                   <img
                     src={`https://image.tmdb.org/t/p/w154${selectedMovie.poster_path}`}
-                    alt="Selected Poster"
+                    alt="Póster Seleccionado"
                     className="w-16 h-24 object-cover rounded shadow-md"
                   />
                 )}
                 <div>
                   <span className="font-label text-[10px] font-black uppercase tracking-widest text-primary-fixed opacity-80 mb-1 inline-block">
-                    {selectedMovie.media_type === "tv" ? "Series" : "Movie"} Selected
+                    {selectedMovie.media_type === "tv" ? "Serie" : "Película"} Seleccionada
                   </span>
                   <h3 className="font-headline font-bold text-lg leading-tight mb-1">
                     {selectedMovie.title || selectedMovie.name}
@@ -206,7 +206,7 @@ export default function NewPost() {
 
             {!selectedMovie && searchResults.length === 0 && !searchQuery && (
               <div className="flex flex-wrap gap-2 mt-2">
-                {["Dune: Part Two", "Poor Things", "The Bear"].map((suggestion) => (
+                {["Nueve Reinas", "El Secreto de sus Ojos", "Okupas"].map((suggestion) => (
                   <span
                     key={suggestion}
                     onClick={() => setSearchQuery(suggestion)}
@@ -221,7 +221,7 @@ export default function NewPost() {
 
           <div className="bg-surface-container-low rounded-lg p-8 text-center space-y-6">
             <h3 className="font-headline font-bold text-primary">
-              Your Pochoclos Rating
+              Tu Puntaje en Pochoclos
             </h3>
             <div className="flex justify-center gap-4">
               {[1, 2, 3, 4, 5].map((num) => {
@@ -256,21 +256,21 @@ export default function NewPost() {
               })}
             </div>
             <p className="text-sm text-on-surface-variant font-medium italic">
-              {rating === 1 && "Not my cup of tea..."}
-              {rating === 2 && "It was okay."}
-              {rating === 3 && "Pretty good, enjoyable."}
-              {rating === 4 && "A solid four-popcorn experience!"}
-              {rating === 5 && "Absolute Masterpiece!"}
+              {rating === 1 && "No me gustó nada..."}
+              {rating === 2 && "Y... zafa, pero ahí nomás."}
+              {rating === 3 && "Linda, bastante entretenida."}
+              {rating === 4 && "¡Increíble! Recomiendo muchísimo."}
+              {rating === 5 && "¡Obra maestra total! Locura."}
             </p>
           </div>
 
           <div className="space-y-3">
             <label className="font-headline font-bold text-primary px-1">
-              Why do you fave it?
+              ¿Por qué recomendas esto?
             </label>
             <textarea
               className="w-full p-6 bg-surface-container-highest rounded-lg border-none focus:ring-2 focus:ring-surface-tint/40 font-body text-on-surface placeholder:text-outline/60 resize-none transition-all leading-relaxed"
-              placeholder="Write your cinematic review... Focus on the direction, the script, or just how much it made you cry."
+              placeholder="Mandale tu reseña de la obra... Contá qué onda la dirección, los actores o qué te transmitió."
               rows={6}
               value={review}
               onChange={(e) => setReview(e.target.value)}
@@ -279,7 +279,7 @@ export default function NewPost() {
 
           <div className="space-y-3">
             <label className="font-headline font-bold text-primary px-1">
-              Vibe Check
+              Vibe Check (La Onda)
             </label>
             <div className="flex flex-wrap gap-2">
               {VIBES.map((vibe) => {
@@ -303,7 +303,7 @@ export default function NewPost() {
 
           <div className="pt-6">
             <button className="w-full py-5 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-headline font-extrabold text-lg tracking-wide shadow-xl shadow-primary/20 active:scale-[0.98] transition-all hover:opacity-90">
-              Post My Recommendation ({rating} Pochoclos)
+              Publicar Recomendación ({rating} Pochoclos)
             </button>
           </div>
         </div>
